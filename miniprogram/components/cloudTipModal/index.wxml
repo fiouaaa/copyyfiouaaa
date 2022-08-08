@@ -1,13 +1,33 @@
-<!--miniprogram/components/cloudTipModal/index.wxml-->
-<view class="install_tip" wx:if="{{showUploadTip}}">
-  <view class="install_tip_back"></view>
-  <view class="install_tip_detail">
-    <view class="install_tip_detail_title">体验前需部署云资源</view>
-    <view class="install_tip_detail_tip">请开启调试器进入终端窗口，复制并运行以下命令</view>
-    <view class="install_tip_detail_shell">
-      {{tipText}}
-      <view bindtap="copyShell" class="install_tip_detail_copy">复制</view>
+<view class="container">
+  <view class="page-name">洪茹茹的问卷</view>
+  <view class="question-wrap">
+    <view class="question-title">1. 姓名</view>
+    <view class="question-con">
+      <input type="text" class="input-text" placeholder="请填写" />
     </view>
-    <view bindtap="onChangeShowUploadTip" class="install_tip_detail_button">已执行命令</view>
+  </view>
+  <view class="question-wrap">
+    <view class="question-title">2. 心情</view>
+    <view class="question-con">
+      <radio-group bindchange="radioChange">
+        <label>
+          <radio value="A" />
+          好
+        </label>
+        <label>
+          <radio value="B" />
+          不好不好
+        </label>
+      </radio-group>
+    </view>
+  </view>
+  <view class="question-wrap">
+    <view class="question-title">3. 今天过的好不好丫?</view>
+    <view class="question-con">
+      <input type="text" class="input-text" placeholder="请填写" />
+    </view>
+  </view>
+  <view class="btn-row">
+    <button type="primary">保存答案</button>
   </view>
 </view>

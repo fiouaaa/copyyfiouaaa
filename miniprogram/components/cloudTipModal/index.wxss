@@ -45,7 +45,7 @@
 }
 
 .install_tip_detail_button {
-  color: #07C160;
+  color: #0974ff;
   font-weight: 500;
   background-color: rgba(0,0,0,0.1);
   width: 60%;
